@@ -5,9 +5,12 @@ function Mostrar()
 
 	edad=document.getElementById('edad').value;
 
-	if(edad) 
+	if(edad<18) 
 	{
-
+		if(edad>12)
+		{
+			alert("Es adolecente");
+		}
 	}
 
 }//FIN DE LA FUNCIÓN
