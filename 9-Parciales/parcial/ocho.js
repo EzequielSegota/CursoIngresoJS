@@ -64,6 +64,7 @@ function Mostrar()
 		while(edad<0 || edad>100)
 		{
 			edad=prompt("Ingrese edad");
+			edad=parseInt(edad);
 		}
 
 
