@@ -20,7 +20,7 @@ function Mostrar()
 	var nombreMaxNota;
 	var notaMujeres=0;
 	var promedioNotaMujeres;
-	var menorEdad=0;
+	var menorEdad=100;
 	var edad=0;
 	var sexoMenorDeEdad;
 	var edadesAprobados=0;
@@ -60,7 +60,8 @@ function Mostrar()
 		}
 		
 		edad=prompt("Ingrese edad");
-
+		edad=parseInt(edad);
+		
 		while(edad<0 || edad>100)
 		{
 			edad=prompt("Ingrese edad");
