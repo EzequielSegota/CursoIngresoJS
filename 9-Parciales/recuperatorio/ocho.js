@@ -40,8 +40,8 @@ function Mostrar()
 	var hombresARecursar=0;
 	var mujeresARecursar=0;
 
-	var promedioMujeresRecursar=0;
-	var promedioHombresRecursar=0;
+	var promedioMujeresRecursar;
+	var promedioHombresRecursar;
 
 	var menorEdad=101;
 	var sexoMenor;
