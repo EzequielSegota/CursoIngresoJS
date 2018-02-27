@@ -16,7 +16,7 @@
 */
 function Mostrar()
 {
-	var alumnos;
+	/*var alumnos;
 	var contadorDeAlumnos=0;
 	var respuesta="si";
 
@@ -156,5 +156,55 @@ function Mostrar()
 
 	document.write("<br>El sexo del menor de edad es:"+sexoMenor+"<br>Y el del mayor es: "+sexoMayor);
 
-	document.write("<br>Cantidad de ceros: "+contadorCeros);
+	document.write("<br>Cantidad de ceros: "+contadorCeros);*/
+
+	var numerosPositivos;
+	var contadorPositivos=0;
+	var respuesta="";
+	var contadorPares=0;
+	var acumuladorPositivos=0
+	var promedioPositivos;
+	var max=0;
+	var min= Number.MAX_VALUE
+	
+	while(respuesta!="no")
+	{
+		numerosPositivos=prompt("Ingrese numero positivo:");
+		numerosPositivos=parseInt(numerosPositivos);
+
+		while(numerosPositivos<1)
+		{
+			numerosPositivos=prompt("Ingrese numero positivo:");
+			numerosPositivos=parseInt(numerosPositivos);
+
+		}
+		contadorPositivos++;
+		acumuladorPositivos=acumuladorPositivos+numerosPositivos
+
+		if(numerosPositivos%2==0)
+		{
+			contadorPares++;
+		}
+
+		if(numerosPositivos<min)
+		{
+			min=numerosPositivos;
+		}
+		if(numerosPositivos>max)
+		{
+			max=numerosPositivos;
+		}
+
+		respuesta=prompt("Ingrese no para detener");
+	}
+	document.write("<br>La cantidad de números pares es: "+contadorPares);
+
+	promedioPositivos=acumuladorPositivos/contadorPositivos;
+	document.write("<br>El promedio de números es: "+promedioPositivos);
+
+	document.write("<br>La suma de todos los números es: "+acumuladorPositivos);
+
+	document.write("<br>El mayor número fue: "+max);
+	document.write("<br>El menor número fue: "+min);
+
 }
